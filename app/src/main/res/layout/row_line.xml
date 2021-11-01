@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="line"
+            type="com.tispunshahryar960103.metro.models.Line" />
+
+    </data>
+
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_line"
+        app:cardCornerRadius="@dimen/_8sdp"
+        android:elevation="@dimen/_8sdp"
+        android:layout_marginTop="@dimen/_16sdp"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_80sdp">
+
+        <RelativeLayout
+            android:id="@+id/rel_line"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imageView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/_16sdp"
+                android:tint="@color/white"
+                app:srcCompat="@drawable/ic_baseline_airline_stops_24" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txt_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{line.title}"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:layout_marginTop="@dimen/_25sdp"
+                android:layout_marginEnd="@dimen/_16sdp"
+                android:layout_toStartOf="@id/imageView"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txt_english_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="40dp"
+                android:text="@{line.englishTitle}"
+                android:textColor="@color/white"
+                android:layout_marginTop="@dimen/_50sdp"
+                android:layout_marginEnd="@dimen/_16sdp"
+                android:layout_toStartOf="@id/imageView"
+                android:textStyle="bold" />
+
+
+        </RelativeLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+</layout>

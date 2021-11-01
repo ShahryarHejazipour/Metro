@@ -7,4 +7,16 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="toolbar_background_color">#4CAF50</color>
+
+
+
+    <color name="Red">#db4e49</color>
+    <color name="Blue">#356eaa</color>
+    <color name="LowBlue">#5fb1ce</color>
+    <color name="Yellow">#f4b653</color>
+    <color name="Orange">#f48653</color>
+    <color name="Green">#3c9073</color>
+    <color name="Purple">#994ca1</color>
+    <color name="WhiteDark">#979797</color>
 </resources>

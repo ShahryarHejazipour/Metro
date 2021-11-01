@@ -36,13 +36,13 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
 
-        /**
-         * This Below Toast Is For NDK Testing
-         */
 
-        Toast.makeText(context, stringFromJNI(), Toast.LENGTH_SHORT).show()
     }
 
 
     private external fun stringFromJNI(): String
+
+    override fun onSupportNavigateUp(): Boolean {
+        return super.onSupportNavigateUp()
+    }
 }

@@ -17,3 +17,11 @@ Java_com_tispunshahryar960103_metro_utils_Constants_getNDKLibraryName(
     std::string hello = "ndksample";
     return env->NewStringUTF(hello.c_str());
 }
+
+extern "C" JNIEXPORT jstring JNICALL
+Java_com_tispunshahryar960103_metro_webService_di_IServiceModule_getBaseUrl(
+        JNIEnv* env,
+        jobject /* this */) {
+    std::string hello = "https://androidsupport.ir/pack/metro/";
+    return env->NewStringUTF(hello.c_str());
+}

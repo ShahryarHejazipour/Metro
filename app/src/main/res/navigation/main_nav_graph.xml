@@ -1,6 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/main_nav_graph">
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_nav_graph"
+    app:startDestination="@id/lineFragment">
 
+    <fragment
+        android:id="@+id/lineFragment"
+        android:name="com.tispunshahryar960103.metro.views.LineFragment"
+        android:label="fragment_line"
+        tools:layout="@layout/fragment_line" />
+    <fragment
+        android:id="@+id/stationFragment"
+        android:name="com.tispunshahryar960103.metro.views.StationFragment"
+        android:label="StationFragment" />
+    <fragment
+        android:id="@+id/stationDetailsFragment"
+        android:name="com.tispunshahryar960103.metro.views.StationDetailsFragment"
+        android:label="fragment_station_details"
+        tools:layout="@layout/fragment_station_details" />
 </navigation>
