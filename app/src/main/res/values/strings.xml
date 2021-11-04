@@ -4,5 +4,19 @@
     <string name="close">Close</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="public_transportation">public Transportation</string>
+    <string name="public_transportation_farsi">خطوط اتوبوس و تاکسی</string>
+    <string name="important_centrals_farsi">مراکز مهم اطراف ایستگاه</string>
+    <string name="important_centrals">Nearby Places</string>
+    <string name="atm">دستگاه خودپرداز ATM</string>
+    <string name="taxi">ایستگاه تاکسی</string>
+    <string name="phone">تلفن همگانی</string>
+    <string name="lost">اشیا گمشده</string>
+    <string name="elevator">آسانسور</string>
+    <string name="escalator">پله برقی</string>
+    <string name="wc">سرویس بهداشتی</string>
+    <string name="bus_station">ایستگاه اتوبوس</string>
+    <string name="water">آب آشامیدنی</string>
+    <string name="parking">پارکینگ</string>
 
 </resources>

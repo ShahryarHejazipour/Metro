@@ -36,7 +36,7 @@ class LinesAdapter(private val linesList: List<Line>): RecyclerView.Adapter<Line
             "3" -> {holder.binding.relLine.setBackgroundResource(R.color.LowBlue)}
             "4" -> {holder.binding.relLine.setBackgroundResource(R.color.Yellow)}
             "5" -> {holder.binding.relLine.setBackgroundResource(R.color.Purple)}
-            "6" -> {holder.binding.relLine.setBackgroundResource(R.color.Green)}
+            "7" -> {holder.binding.relLine.setBackgroundResource(R.color.Green)}
 
         }
 

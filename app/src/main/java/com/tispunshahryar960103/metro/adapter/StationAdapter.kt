@@ -15,6 +15,9 @@ class StationAdapter(val stationList: List<Station>) :
     RecyclerView.Adapter<StationAdapter.StationVH>() {
 
 
+
+
+
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): StationVH {
 
         val binding: RowStationBinding =
@@ -44,7 +47,7 @@ class StationAdapter(val stationList: List<Station>) :
             "3"->{holder.binding.relStation.setBackgroundResource(R.color.LowBlue)}
             "4"->{holder.binding.relStation.setBackgroundResource(R.color.Yellow)}
             "5"->{holder.binding.relStation.setBackgroundResource(R.color.Purple)}
-            "6"->{holder.binding.relStation.setBackgroundResource(R.color.Green)}
+            "7"->{holder.binding.relStation.setBackgroundResource(R.color.Green)}
         }
 
     }
