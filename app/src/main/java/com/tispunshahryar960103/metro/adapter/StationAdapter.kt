@@ -49,7 +49,25 @@ class StationAdapter(val stationList: List<Station>) :
             "5"->{holder.binding.relStation.setBackgroundResource(R.color.Purple)}
             "7"->{holder.binding.relStation.setBackgroundResource(R.color.Green)}
         }
+        when(station.CrossLine_ID){
 
+            "0"->{
+                holder.binding.txtCross.visibility = View.GONE
+                holder.binding.txtCrossLine.visibility = View.GONE
+                holder.binding.imgCross.visibility = View.GONE
+            }
+            else-> setVisible(holder)
+
+        }
+
+
+
+    }
+
+    private fun setVisible(holder: StationVH) {
+        holder.binding.txtCross.visibility = View.VISIBLE
+        holder.binding.txtCrossLine.visibility = View.VISIBLE
+        holder.binding.imgCross.visibility = View.VISIBLE
     }
 
     override fun getItemCount(): Int {

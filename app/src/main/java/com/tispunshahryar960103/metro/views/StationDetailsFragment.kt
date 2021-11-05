@@ -7,14 +7,22 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.Navigation
+import com.tispunshahryar960103.metro.BuildConfig
 import com.tispunshahryar960103.metro.R
 import com.tispunshahryar960103.metro.databinding.FragmentStationDetailsBinding
+import com.tispunshahryar960103.metro.models.Line
 import com.tispunshahryar960103.metro.models.Station
+import com.tispunshahryar960103.metro.utils.AppConfig
+import dagger.hilt.android.AndroidEntryPoint
+import javax.inject.Inject
 
-
+@AndroidEntryPoint
 class StationDetailsFragment : Fragment() {
 
     lateinit var binding: FragmentStationDetailsBinding
+
+    @Inject
+    lateinit var appConfig: AppConfig
 
 
     override fun onCreateView(
@@ -25,7 +33,11 @@ class StationDetailsFragment : Fragment() {
         binding = FragmentStationDetailsBinding.inflate(inflater, container, false)
 
         val station: Station? = arguments?.getParcelable("station")
+        /*val line:Line?=arguments?.getParcelable("line")
+        binding.line=line*/
         binding.station = station
+        binding.appConfig=appConfig
+
 
         when (station?.LineId) {
 

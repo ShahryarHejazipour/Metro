@@ -15,8 +15,10 @@ import com.tispunshahryar960103.metro.R
 import com.tispunshahryar960103.metro.adapter.StationAdapter
 import com.tispunshahryar960103.metro.databinding.FragmentStationBinding
 import com.tispunshahryar960103.metro.models.Line
+import com.tispunshahryar960103.metro.utils.AppConfig
 import com.tispunshahryar960103.metro.viewModels.StationViewModel
 import dagger.hilt.android.AndroidEntryPoint
+import javax.inject.Inject
 
 @AndroidEntryPoint
 class StationFragment : Fragment() {
@@ -24,6 +26,9 @@ class StationFragment : Fragment() {
     lateinit var binding:FragmentStationBinding
 
     private val stationViewModel: StationViewModel by viewModels()
+
+    @Inject
+    lateinit var appConfig:AppConfig
 
 
     override fun onCreateView(
@@ -40,13 +45,19 @@ class StationFragment : Fragment() {
         val line: Line? = arguments?.getParcelable("line")
         val lineId=line?.id
         binding.line=line
+        if (line != null) {
+            appConfig.setTitle(line.title)
+            appConfig.setEnglishTitle(line.EnglishTitle)
+        }
 
         if (lineId != null) {
             stationViewModel.getStations(lineId.toInt())
         }
+        binding.progressBar.visibility=View.VISIBLE
         stationViewModel.mutableLiveData.observe(requireActivity(), Observer {
 
             Log.e("", "" )
+            binding.progressBar.visibility=View.GONE
 
             binding.recyclerViewStation.adapter=StationAdapter(it)
             binding.recyclerViewStation.layoutManager=LinearLayoutManager(requireActivity(),RecyclerView.VERTICAL,false)

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/item_metro"
+        android:title="@string/metro_map"
+        android:icon="@drawable/ic_baseline_location_on_24"
+
+        />
+</menu>

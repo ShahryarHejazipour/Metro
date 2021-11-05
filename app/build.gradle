@@ -230,6 +230,14 @@ dependencies {
     //1- an external library for secure shared preferences
     implementation 'com.scottyab:secure-preferences-lib:0.1.7'
 
+    //-----------------------------------------------------
+
+    /**
+     * for touching on an image and zoom it
+     */
+
+
+
 
 }
 

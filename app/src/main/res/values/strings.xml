@@ -18,5 +18,7 @@
     <string name="bus_station">ایستگاه اتوبوس</string>
     <string name="water">آب آشامیدنی</string>
     <string name="parking">پارکینگ</string>
+    <string name="metro_map">نقشه ی مترو</string>
+    <string name="cross_line">تقاطع با خط :</string>
 
 </resources>

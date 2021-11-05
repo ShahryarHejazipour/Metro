@@ -8,7 +8,12 @@
         <variable
             name="station"
             type="com.tispunshahryar960103.metro.models.Station" />
-
+       <!-- <variable
+            name="line"
+            type="com.tispunshahryar960103.metro.models.Line" />-->
+        <variable
+            name="appConfig"
+            type="com.tispunshahryar960103.metro.utils.AppConfig" />
     </data>
 
     <LinearLayout
@@ -34,7 +39,25 @@
                     android:layout_centerVertical="true"
                     android:tint="@color/white"
                     app:srcCompat="@drawable/ic_baseline_arrow_back_24" />
-
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/txt_line_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:textColor="@color/white"
+                    android:text="@{appConfig.title}"
+                   />
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/txt_line_title_english"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                 android:layout_centerHorizontal="true"
+                    android:textColor="@color/white"
+                    android:layout_below="@id/txt_line_title"
+                    android:layout_marginTop="@dimen/_20sdp"
+                    android:layout_marginBottom="@dimen/_8sdp"
+                    android:text="@{appConfig.englishTitle}"
+                    />
 
 
 
@@ -68,6 +91,8 @@
                 android:text="@{station.title_English}"
                 android:textSize="@dimen/_25ssp"
                 android:textColor="@color/white" />
+
+
 
 
 

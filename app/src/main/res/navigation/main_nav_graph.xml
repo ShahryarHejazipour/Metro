@@ -19,4 +19,9 @@
         android:name="com.tispunshahryar960103.metro.views.StationDetailsFragment"
         android:label="fragment_station_details"
         tools:layout="@layout/fragment_station_details" />
+    <fragment
+        android:id="@+id/metroGraphFragment"
+        android:name="com.tispunshahryar960103.metro.views.MetroGraphFragment"
+        android:label="fragment_metro_graph"
+        tools:layout="@layout/fragment_metro_graph" />
 </navigation>
