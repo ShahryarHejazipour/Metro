@@ -8,9 +8,9 @@
         <variable
             name="station"
             type="com.tispunshahryar960103.metro.models.Station" />
-       <!-- <variable
-            name="line"
-            type="com.tispunshahryar960103.metro.models.Line" />-->
+        <!-- <variable
+             name="line"
+             type="com.tispunshahryar960103.metro.models.Line" />-->
         <variable
             name="appConfig"
             type="com.tispunshahryar960103.metro.utils.AppConfig" />
@@ -39,26 +39,25 @@
                     android:layout_centerVertical="true"
                     android:tint="@color/white"
                     app:srcCompat="@drawable/ic_baseline_arrow_back_24" />
+
                 <androidx.appcompat.widget.AppCompatTextView
                     android:id="@+id/txt_line_title"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerInParent="true"
-                    android:textColor="@color/white"
                     android:text="@{appConfig.title}"
-                   />
+                    android:textColor="@color/white" />
+
                 <androidx.appcompat.widget.AppCompatTextView
                     android:id="@+id/txt_line_title_english"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                 android:layout_centerHorizontal="true"
-                    android:textColor="@color/white"
                     android:layout_below="@id/txt_line_title"
+                    android:layout_centerHorizontal="true"
                     android:layout_marginTop="@dimen/_20sdp"
                     android:layout_marginBottom="@dimen/_8sdp"
                     android:text="@{appConfig.englishTitle}"
-                    />
-
+                    android:textColor="@color/white" />
 
 
             </RelativeLayout>
@@ -67,9 +66,9 @@
 
         <LinearLayout
             android:id="@+id/linear_station"
-            android:background="@color/Blue"
             android:layout_width="match_parent"
             android:layout_height="@dimen/_110sdp"
+            android:background="@color/Blue"
             android:gravity="center"
             android:orientation="vertical">
 
@@ -79,8 +78,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/_8sdp"
                 android:text="@{station.title}"
-                android:textSize="@dimen/_25ssp"
-                android:textColor="@color/white" />
+                android:textColor="@color/white"
+                android:textSize="@dimen/_25ssp" />
 
             <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/txt_title_english"
@@ -89,11 +88,8 @@
                 android:layout_marginTop="@dimen/_8sdp"
                 android:layout_marginBottom="@dimen/_8sdp"
                 android:text="@{station.title_English}"
-                android:textSize="@dimen/_25ssp"
-                android:textColor="@color/white" />
-
-
-
+                android:textColor="@color/white"
+                android:textSize="@dimen/_25ssp" />
 
 
         </LinearLayout>
@@ -101,8 +97,8 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="@dimen/_50sdp"
-            android:padding="@dimen/_16sdp"
             android:background="@color/black"
+            android:padding="@dimen/_16sdp"
             android:paddingTop="@dimen/_8sdp"
             android:paddingBottom="@dimen/_8sdp">
 
@@ -236,35 +232,35 @@
         </LinearLayout>
 
         <LinearLayout
-            android:padding="@dimen/_8sdp"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:background="@color/black"
 
             android:orientation="horizontal"
-            android:background="@color/black">
+            android:padding="@dimen/_8sdp">
 
             <LinearLayout
                 android:id="@+id/rel_facility"
-                android:orientation="vertical"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:gravity="end"
-                >
+                android:orientation="vertical">
 
                 <LinearLayout
-                    android:layout_marginTop="@dimen/_16sdp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_16sdp"
                     android:orientation="horizontal">
+
                     <androidx.appcompat.widget.AppCompatTextView
                         android:id="@+id/txt_atm"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textColor="@color/white"
-                        android:text="@string/atm"
                         android:layout_marginEnd="@dimen/_8sdp"
-                        />
+                        android:text="@string/atm"
+                        android:textColor="@color/white" />
+
                     <androidx.appcompat.widget.AppCompatImageView
                         android:id="@+id/img_atm"
                         android:layout_width="wrap_content"
@@ -273,21 +269,22 @@
                         app:srcCompat="@drawable/ic_baseline_atm_24" />
 
 
-
                 </LinearLayout>
+
                 <LinearLayout
-                    android:layout_marginTop="@dimen/_16sdp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_16sdp"
                     android:orientation="horizontal">
+
                     <androidx.appcompat.widget.AppCompatTextView
                         android:id="@+id/txt_taxi"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textColor="@color/white"
-                        android:text="@string/taxi"
                         android:layout_marginEnd="@dimen/_8sdp"
-                        />
+                        android:text="@string/taxi"
+                        android:textColor="@color/white" />
+
                     <androidx.appcompat.widget.AppCompatImageView
                         android:id="@+id/img_taxi"
                         android:layout_width="wrap_content"
@@ -296,21 +293,22 @@
                         app:srcCompat="@drawable/ic_baseline_local_taxi_24" />
 
 
-
                 </LinearLayout>
+
                 <LinearLayout
-                    android:layout_marginTop="@dimen/_16sdp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_16sdp"
                     android:orientation="horizontal">
+
                     <androidx.appcompat.widget.AppCompatTextView
                         android:id="@+id/txt_phone"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textColor="@color/white"
-                        android:text="@string/phone"
                         android:layout_marginEnd="@dimen/_8sdp"
-                        />
+                        android:text="@string/phone"
+                        android:textColor="@color/white" />
+
                     <androidx.appcompat.widget.AppCompatImageView
                         android:id="@+id/img_phone"
                         android:layout_width="wrap_content"
@@ -319,21 +317,22 @@
                         app:srcCompat="@drawable/ic_baseline_local_phone_24" />
 
 
-
                 </LinearLayout>
+
                 <LinearLayout
-                    android:layout_marginTop="@dimen/_16sdp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_16sdp"
                     android:orientation="horizontal">
+
                     <androidx.appcompat.widget.AppCompatTextView
                         android:id="@+id/txt_lost"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textColor="@color/white"
-                        android:text="@string/lost"
                         android:layout_marginEnd="@dimen/_8sdp"
-                        />
+                        android:text="@string/lost"
+                        android:textColor="@color/white" />
+
                     <androidx.appcompat.widget.AppCompatImageView
                         android:id="@+id/img_lost"
                         android:layout_width="wrap_content"
@@ -342,21 +341,22 @@
                         app:srcCompat="@drawable/ic_baseline_restore_from_trash_24" />
 
 
-
                 </LinearLayout>
+
                 <LinearLayout
-                    android:layout_marginTop="@dimen/_16sdp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_16sdp"
                     android:orientation="horizontal">
+
                     <androidx.appcompat.widget.AppCompatTextView
                         android:id="@+id/txt_elevator"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textColor="@color/white"
-                        android:text="@string/elevator"
                         android:layout_marginEnd="@dimen/_8sdp"
-                        />
+                        android:text="@string/elevator"
+                        android:textColor="@color/white" />
+
                     <androidx.appcompat.widget.AppCompatImageView
                         android:id="@+id/img_elevator"
                         android:layout_width="wrap_content"
@@ -365,37 +365,34 @@
                         app:srcCompat="@drawable/ic_baseline_elevator_24" />
 
 
-
                 </LinearLayout>
 
 
-
-
-
             </LinearLayout>
+
             <LinearLayout
                 android:id="@+id/rel_features"
-                android:orientation="vertical"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/_16sdp"
                 android:layout_weight="1"
                 android:gravity="end"
-                android:layout_marginRight="@dimen/_16sdp"
-                >
+                android:orientation="vertical">
 
                 <LinearLayout
-                    android:layout_marginTop="@dimen/_16sdp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_16sdp"
                     android:orientation="horizontal">
+
                     <androidx.appcompat.widget.AppCompatTextView
                         android:id="@+id/txt_escalator"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textColor="@color/white"
-                        android:text="@string/escalator"
                         android:layout_marginEnd="@dimen/_8sdp"
-                        />
+                        android:text="@string/escalator"
+                        android:textColor="@color/white" />
+
                     <androidx.appcompat.widget.AppCompatImageView
                         android:id="@+id/img_escalator"
                         android:layout_width="wrap_content"
@@ -404,21 +401,22 @@
                         app:srcCompat="@drawable/ic_baseline_escalator_24" />
 
 
-
                 </LinearLayout>
+
                 <LinearLayout
-                    android:layout_marginTop="@dimen/_16sdp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_16sdp"
                     android:orientation="horizontal">
+
                     <androidx.appcompat.widget.AppCompatTextView
                         android:id="@+id/txt_wc"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textColor="@color/white"
-                        android:text="@string/wc"
                         android:layout_marginEnd="@dimen/_8sdp"
-                        />
+                        android:text="@string/wc"
+                        android:textColor="@color/white" />
+
                     <androidx.appcompat.widget.AppCompatImageView
                         android:id="@+id/img_wc"
                         android:layout_width="wrap_content"
@@ -427,21 +425,22 @@
                         app:srcCompat="@drawable/ic_baseline_wc_24" />
 
 
-
                 </LinearLayout>
+
                 <LinearLayout
-                    android:layout_marginTop="@dimen/_16sdp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_16sdp"
                     android:orientation="horizontal">
+
                     <androidx.appcompat.widget.AppCompatTextView
                         android:id="@+id/txt_bus_station"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textColor="@color/white"
-                        android:text="@string/bus_station"
                         android:layout_marginEnd="@dimen/_8sdp"
-                        />
+                        android:text="@string/bus_station"
+                        android:textColor="@color/white" />
+
                     <androidx.appcompat.widget.AppCompatImageView
                         android:id="@+id/img_bus_station"
                         android:layout_width="wrap_content"
@@ -450,21 +449,22 @@
                         app:srcCompat="@drawable/ic_baseline_directions_bus_24" />
 
 
-
                 </LinearLayout>
+
                 <LinearLayout
-                    android:layout_marginTop="@dimen/_16sdp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_16sdp"
                     android:orientation="horizontal">
+
                     <androidx.appcompat.widget.AppCompatTextView
                         android:id="@+id/txt_water"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textColor="@color/white"
-                        android:text="@string/water"
                         android:layout_marginEnd="@dimen/_8sdp"
-                        />
+                        android:text="@string/water"
+                        android:textColor="@color/white" />
+
                     <androidx.appcompat.widget.AppCompatImageView
                         android:id="@+id/img_water"
                         android:layout_width="wrap_content"
@@ -473,21 +473,22 @@
                         app:srcCompat="@drawable/ic_baseline_air_24" />
 
 
-
                 </LinearLayout>
+
                 <LinearLayout
-                    android:layout_marginTop="@dimen/_16sdp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_16sdp"
                     android:orientation="horizontal">
+
                     <androidx.appcompat.widget.AppCompatTextView
                         android:id="@+id/txt_parking"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textColor="@color/white"
-                        android:text="@string/parking"
                         android:layout_marginEnd="@dimen/_8sdp"
-                        />
+                        android:text="@string/parking"
+                        android:textColor="@color/white" />
+
                     <androidx.appcompat.widget.AppCompatImageView
                         android:id="@+id/img_parking"
                         android:layout_width="wrap_content"
@@ -496,15 +497,10 @@
                         app:srcCompat="@drawable/ic_baseline_local_parking_24" />
 
 
-
                 </LinearLayout>
 
 
-
-
-
             </LinearLayout>
-
 
 
         </LinearLayout>
